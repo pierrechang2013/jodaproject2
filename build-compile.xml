@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<project name="JodaProject2" default="compile" basedir="."> 
+
+	
+    <property name="src" value="./src"/> 
+
+	<property name="dest" value="./bin"/>
+	
+	<property name="lib" value="./lib"/>
+	
+	<path id="project.classpath">  
+		
+	        <fileset dir="${lib}">  
+	            <include name="*.jar" />  
+	        </fileset>  
+		
+	</path>  
+
+    
+    <!--清理，刪除所有內容-->
+    <target name="clean">  
+		<echo message="***************5555****************"/>	
+
+    	
+        <delete dir="${dest}"/><!--刪除class文件夾-->
+    	
+		<echo message="***************clean****************"/>	
+    </target>  
+
+    <!--初始化-->
+	<target name="init" depends="clean"> 
+	
+			<mkdir dir="${dest}"/> <!--創建class文件夾-->
+
+	</target> 
+    
+
+	<target name="compile" depends="init" description="compile class file"> 
+			
+		
+		
+		<javac srcdir="${src}" destdir="${dest}">
+			
+			 <compilerarg line="-encoding UTF-8 -verbose" />  
+			 <classpath refid="project.classpath" />  
+	    </javac> 
+		
+		
+		
+	    <echo message="***************copy the class files in bin to class of root****************"/>	
+	</target> 
+
+
+
+</project> 
