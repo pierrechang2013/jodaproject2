@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import com.decarie.joda.HemcrestTest;
 
+import java.awt.Color;
+
 public class HemcrestTestTest {
 	
 	HemcrestTest ht = null;
