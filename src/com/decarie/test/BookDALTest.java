@@ -26,6 +26,8 @@ public class BookDALTest {
 		
 		//Create mock object of BookDAL
 	    mockedBookDAL = mock(BookDAL.class);
+	    
+	    
 	 
 	    //Create few instances of Book class.
 	    book1 = new Book("8131721019","Compilers Principles",
